@@ -271,7 +271,7 @@ namespace QEthics
                                 }
                                 else
                                 {
-                                    Messages.Message("QE_BrainScanningRejectInput".Translate(pawn.Name), MessageTypeDefOf.RejectInput, false);
+                                    Messages.Message("QE_BrainScanningRejectInput".Translate(new NamedArgument(pawn.Name, "Name")), MessageTypeDefOf.RejectInput, false);
                                     SoundDefOf.ClickReject.PlayOneShot(SoundInfo.OnCamera());
                                 }
                             }
