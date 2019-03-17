@@ -43,7 +43,7 @@
 	<QE_LetterHumanlikeGrownDescription>Welcome vatgrown clone {0} to the colony!\n\nYou can either train them up from scratch with the help of their natural affinities or apply a Brain scan template on them to give them a skillset right away.</QE_LetterHumanlikeGrownDescription>
 
 	<!-- Brain scanning -->
-	<QE_BrainScanningRejectInput>{0} was rejected due to no valid patient bed could be found.</QE_BrainScanningRejectInput>
+	<QE_BrainScanningRejectInput>{Name} was rejected because no valid patient bed could be found.</QE_BrainScanningRejectInput>
 	<QE_BrainScanningApplyTemplate>Apply brain scan template</QE_BrainScanningApplyTemplate>
 	<QE_BrainScanningFloatMenuLabel>Apply brain scan template to {0}</QE_BrainScanningFloatMenuLabel>
 	<QE_BrainScanningFloatMenuLabelDisabled>{0} (No medical bed)</QE_BrainScanningFloatMenuLabelDisabled>
