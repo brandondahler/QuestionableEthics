@@ -1,0 +1,9 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Cannot include Assembly-CSharp.dll or UnityEngine.dll because it is presumably illegal to distribute them.
+_ReferenceAssemblies/Assembly-CSharp.dll
+_ReferenceAssemblies/UnityEngine.dll

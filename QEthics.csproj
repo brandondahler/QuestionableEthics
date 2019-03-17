@@ -17,15 +17,14 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\RimWorld\Mods\QuestionableEthics\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\RimWorld\Mods\QuestionableEthics\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -33,14 +32,14 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\839005762\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>_ReferenceAssemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\839005762\Assemblies\AlienRace.dll</HintPath>
+      <HintPath>_ReferenceAssemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>_ReferenceAssemblies\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -50,7 +49,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>_ReferenceAssemblies\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -118,6 +117,53 @@
     <Compile Include="Workers\RecipeWorker_NerveStapling.cs" />
     <Compile Include="Workers\ThoughtWorker_HasCrudeAddedBodyPart.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\About\About.xml" />
+    <Content Include="Data\About\Preview.png" />
+    <Content Include="Data\About\PublishedFileId.txt" />
+    <Content Include="Data\Defs\GrowerRecipeDefs\Recipes_OrganVat.xml" />
+    <Content Include="Data\Defs\HediffDefs\Hediffs_Clone.xml" />
+    <Content Include="Data\Defs\HediffDefs\Hediffs_LifeSupportSystem.xml" />
+    <Content Include="Data\Defs\JobDefs\Jobs_Cloning.xml" />
+    <Content Include="Data\Defs\JobDefs\Jobs_Grower.xml" />
+    <Content Include="Data\Defs\RecipeDefs\Recipes_BrainScanning.xml" />
+    <Content Include="Data\Defs\RecipeDefs\Recipes_GenomeSequence.xml" />
+    <Content Include="Data\Defs\RecipeDefs\Recipes_Nutrients.xml" />
+    <Content Include="Data\Defs\RecipeDefs\Recipes_Surgery_Installations_QE.xml" />
+    <Content Include="Data\Defs\ResearchDefs\Research_QuestionableEthics.xml" />
+    <Content Include="Data\Defs\SpecialDefs\Backstories_OrganismVat.xml" />
+    <Content Include="Data\Defs\TaleDefs\Tales_Vatgrown.xml" />
+    <Content Include="Data\Defs\ThingDefs\Buildings_Medical.xml" />
+    <Content Include="Data\Defs\ThingDefs\Buildings_Vats.xml" />
+    <Content Include="Data\Defs\ThingDefs\Items_BodyParts_QE.xml" />
+    <Content Include="Data\Defs\ThingDefs\Items_BrainScanning.xml" />
+    <Content Include="Data\Defs\ThingDefs\Items_GenomeSequencer.xml" />
+    <Content Include="Data\Defs\ThingDefs\Resources_Grower.xml" />
+    <Content Include="Data\Defs\ThoughtDefs\Thoughts_Memory_VatgrownClone.xml" />
+    <Content Include="Data\Defs\WorkGiverDefs\WorkGivers_Grower.xml" />
+    <Content Include="Data\Languages\English\Keyed\QuestionableEthics.xml" />
+    <Content Include="Data\Patches\Patch_Compatibility_TiberiumRim.xml" />
+    <Content Include="Data\Patches\Patch_Organs.xml" />
+    <Content Include="Data\Textures\Effects\Organs\Beet_Organ.png" />
+    <Content Include="Data\Textures\Effects\Organs\Shinzy_Organ.png" />
+    <Content Include="Data\Textures\Effects\Organs\Shinzy_Organ_Eyes.png" />
+    <Content Include="Data\Textures\Things\Building\QEVat.png" />
+    <Content Include="Data\Textures\Things\Building\QEVatBottom.png" />
+    <Content Include="Data\Textures\Things\Building\QEVatGlow.png" />
+    <Content Include="Data\Textures\Things\Building\QEVatGlow_backup.png" />
+    <Content Include="Data\Textures\Things\Building\QEVatTop.png" />
+    <Content Include="Data\Textures\Things\Building\QEVatTopDetail.png" />
+    <Content Include="Data\Textures\Things\Item\Manufactured\BrainDataSlab.png" />
+    <Content Include="Data\Textures\Things\Item\Manufactured\BrainScanner.png" />
+    <Content Include="Data\Textures\Things\Item\Manufactured\DataSlab.png" />
+    <Content Include="Data\Textures\Things\Item\Manufactured\GenomeSequencer.png" />
+    <Content Include="Data\Textures\Things\Item\Resource\NutrientSolution.png" />
+    <Content Include="Data\Textures\Things\Item\Resource\ProteinMash.png" />
+    <Content Include="Data\Patches\Patch_Surgeries.xml" />
+    <None Include="_ReferenceAssemblies\0Harmony.dll" />
+    <None Include="_ReferenceAssemblies\AlienRace.dll" />
+    <None Include="_ReferenceAssemblies\Assembly-CSharp.dll" />
+    <None Include="_ReferenceAssemblies\UnityEngine.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
