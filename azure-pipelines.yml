@@ -1,0 +1,40 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: src/QEthics.sln
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Build.SourcesDirectory)
+    Contents: src/QEthics/Data/**
+    TargetFolder: $(Build.ArtifactsStagingDirectory)
+    OverWrite: true
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Build.SourcesDirectory)
+    Contents: |
+      src/QEthics/bin/$(buildConfiguration)/0Harmony.dll
+      src/QEthics/bin/$(buildConfiguration)/QEthics.dll
+      src/QEthics/bin/$(buildConfiguration)/QEthics.pdb
+    TargetFolder: $(Build.ArtifactsStagingDirectory)/Assemblies
+    OverWrite: true
