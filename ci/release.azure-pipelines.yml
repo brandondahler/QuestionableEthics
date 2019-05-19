@@ -1,0 +1,69 @@
+
+pr: none
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: src/QEthics.sln
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Build.SourcesDirectory)
+    Contents: src/QEthics/Data/**
+    TargetFolder: $(Build.ArtifactsStagingDirectory)
+    OverWrite: true
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Build.SourcesDirectory)
+    Contents: |
+      src/QEthics/bin/$(buildConfiguration)/0Harmony.dll
+      src/QEthics/bin/$(buildConfiguration)/QEthics.dll
+      src/QEthics/bin/$(buildConfiguration)/QEthics.pdb
+    TargetFolder: $(Build.ArtifactsStagingDirectory)/Assemblies
+    OverWrite: true
+    
+# Extract version from assembly
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      $qEthics = [System.Reflection.Assembly]::ReflectionOnlyLoadFrom($($env:BUILD_ARTIFACTSSTAGINGDIRECTORY + "\Assemblies\QEthics.dll"))
+      $qEthicsName = $qEthics.GetName()
+      $qEthicsVersion = $qEthicsName.version
+      
+      $formattedVersion = "{0}.{1}.{2}" -f $qEthicsVersion.Major,$qEthicsVersion.Minor,$qEthicsVersion.Build
+      Write-Output "##vso[task.setvariable variable=ExtractedAssemblyVersion]$formattedVersion"
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'QuestionableEthics'
+    publishLocation: 'Container'
+
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    feedsToUse: 'internal'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: 'Default'
+    vstsFeedPackagePublish: 'QuestionableEthics'
+    versionOption: 'custom'
+    versionPublish: '$(ExtractedAssemblyVersion)+$(Build.BuildNumber).$(Build.SourceVersion)'
