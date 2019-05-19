@@ -24,7 +24,7 @@
 	<QE_VatGrowerStopCraftingGizmoDescription>Stops the growing process. Refunds inserted ingredients if the process was not started.</QE_VatGrowerStopCraftingGizmoDescription>
 	<QE_CustomNameCompGizmoLabel>Set custom name</QE_CustomNameCompGizmoLabel>
 	<QE_CustomNameCompGizmoDescription>Sets a custom name which can be easily indentifiable.</QE_CustomNameCompGizmoDescription>
-
+	<QE_VatGrowerGenomesHint>No available genomes. Get them by making 'Genome Sequencers' in machining tables, then use them.</QE_VatGrowerGenomesHint>
 	<!-- UI -->
 	<QE_CustomNameCompDialogTitle>Set custom name for {0}</QE_CustomNameCompDialogTitle>
 	<!-- Genome Sequencer -->
@@ -43,10 +43,10 @@
 	<QE_LetterHumanlikeGrownDescription>Welcome vatgrown clone {0} to the colony!\n\nYou can either train them up from scratch with the help of their natural affinities or apply a Brain scan template on them to give them a skillset right away.</QE_LetterHumanlikeGrownDescription>
 
 	<!-- Brain scanning -->
-	<QE_BrainScanningRejectInput>{0} was rejected due to no valid patient bed could be found.</QE_BrainScanningRejectInput>
+	<QE_BrainScanningRejectInput>{0} was rejected due to no valid bed could be found.</QE_BrainScanningRejectInput>
 	<QE_BrainScanningApplyTemplate>Apply brain scan template</QE_BrainScanningApplyTemplate>
 	<QE_BrainScanningFloatMenuLabel>Apply brain scan template to {0}</QE_BrainScanningFloatMenuLabel>
-	<QE_BrainScanningFloatMenuLabelDisabled>{0} (No medical bed)</QE_BrainScanningFloatMenuLabelDisabled>
+	<QE_BrainScanningFloatMenuLabelDisabled>{0} (No bed)</QE_BrainScanningFloatMenuLabelDisabled>
 	<QE_BrainScanDescription_BackshortChild>Childhood backstory</QE_BrainScanDescription_BackshortChild>
 	<QE_BrainScanDescription_BackshortAdult>Adulthood backstory</QE_BrainScanDescription_BackshortAdult>
 	<QE_BrainScanDescription_Skills>Stored skills</QE_BrainScanDescription_Skills>

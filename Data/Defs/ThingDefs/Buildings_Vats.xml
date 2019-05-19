@@ -161,7 +161,7 @@
 				<basePowerConsumption>700</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Glower">
-				<glowRadius>1,75</glowRadius>
+				<glowRadius>2.75</glowRadius>
 				<glowColor>(181,230,29,0)</glowColor>
 			</li>
 		</comps>

@@ -3,7 +3,6 @@
 	<QEthics.GrowerRecipeDef Name="NaturalOrganGrowerRecipeBase" Abstract="True">
 		<productAmount>1</productAmount>
 		<craftingTime>300000</craftingTime>
-		<maintenceDrain>0.001</maintenceDrain>
 		<ingredients>
 			<li>
 				<filter>

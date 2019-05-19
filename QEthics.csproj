@@ -118,18 +118,26 @@
     <Compile Include="Workers\ThoughtWorker_HasCrudeAddedBodyPart.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="_ReferenceAssemblies\0Harmony.dll" />
+    <None Include="_ReferenceAssemblies\AlienRace.dll" />
+    <None Include="_ReferenceAssemblies\Assembly-CSharp.dll" />
+    <None Include="_ReferenceAssemblies\UnityEngine.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Data\About\About.xml" />
     <Content Include="Data\About\Preview.png" />
-    <Content Include="Data\About\PublishedFileId.txt" />
     <Content Include="Data\Defs\GrowerRecipeDefs\Recipes_OrganVat.xml" />
     <Content Include="Data\Defs\HediffDefs\Hediffs_Clone.xml" />
+    <Content Include="Data\Defs\HediffDefs\Hediffs_Cyberslaving.xml" />
     <Content Include="Data\Defs\HediffDefs\Hediffs_LifeSupportSystem.xml" />
+    <Content Include="Data\Defs\HediffDefs\Hediffs_Local_AddedParts_CrudeBioncs.xml" />
     <Content Include="Data\Defs\JobDefs\Jobs_Cloning.xml" />
     <Content Include="Data\Defs\JobDefs\Jobs_Grower.xml" />
     <Content Include="Data\Defs\RecipeDefs\Recipes_BrainScanning.xml" />
     <Content Include="Data\Defs\RecipeDefs\Recipes_GenomeSequence.xml" />
     <Content Include="Data\Defs\RecipeDefs\Recipes_Nutrients.xml" />
     <Content Include="Data\Defs\RecipeDefs\Recipes_Surgery_Installations_QE.xml" />
+    <Content Include="Data\Defs\RecipeDefs\Recipe_Surgery_Installations_Cyberslaving.xml" />
     <Content Include="Data\Defs\ResearchDefs\Research_QuestionableEthics.xml" />
     <Content Include="Data\Defs\SpecialDefs\Backstories_OrganismVat.xml" />
     <Content Include="Data\Defs\TaleDefs\Tales_Vatgrown.xml" />
@@ -138,12 +146,18 @@
     <Content Include="Data\Defs\ThingDefs\Items_BodyParts_QE.xml" />
     <Content Include="Data\Defs\ThingDefs\Items_BrainScanning.xml" />
     <Content Include="Data\Defs\ThingDefs\Items_GenomeSequencer.xml" />
+    <Content Include="Data\Defs\ThingDefs\Items_Implants_Cyberslaving.xml" />
     <Content Include="Data\Defs\ThingDefs\Resources_Grower.xml" />
+    <Content Include="Data\Defs\ThoughtDefs\Thoughts_Cyberslaving.xml" />
     <Content Include="Data\Defs\ThoughtDefs\Thoughts_Memory_VatgrownClone.xml" />
+    <Content Include="Data\Defs\ThoughtDefs\Thoughts_Situation.xml" />
     <Content Include="Data\Defs\WorkGiverDefs\WorkGivers_Grower.xml" />
+    <Content Include="Data\Defs\WorkTypeDefs\WorkTypes_QuestionableEthics.xml" />
     <Content Include="Data\Languages\English\Keyed\QuestionableEthics.xml" />
+    <Content Include="Data\Patches\Patch_Compatibility_RBSE.xml" />
     <Content Include="Data\Patches\Patch_Compatibility_TiberiumRim.xml" />
     <Content Include="Data\Patches\Patch_Organs.xml" />
+    <Content Include="Data\Patches\Patch_Surgeries.xml" />
     <Content Include="Data\Textures\Effects\Organs\Beet_Organ.png" />
     <Content Include="Data\Textures\Effects\Organs\Shinzy_Organ.png" />
     <Content Include="Data\Textures\Effects\Organs\Shinzy_Organ_Eyes.png" />
@@ -159,11 +173,6 @@
     <Content Include="Data\Textures\Things\Item\Manufactured\GenomeSequencer.png" />
     <Content Include="Data\Textures\Things\Item\Resource\NutrientSolution.png" />
     <Content Include="Data\Textures\Things\Item\Resource\ProteinMash.png" />
-    <Content Include="Data\Patches\Patch_Surgeries.xml" />
-    <None Include="_ReferenceAssemblies\0Harmony.dll" />
-    <None Include="_ReferenceAssemblies\AlienRace.dll" />
-    <None Include="_ReferenceAssemblies\Assembly-CSharp.dll" />
-    <None Include="_ReferenceAssemblies\UnityEngine.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,7 +20,7 @@
 			<li>NutrientPaste</li>
 		</prerequisites>
 		<researchViewX>0</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -37,7 +37,7 @@
 			<li>Prosthetics</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -52,7 +52,7 @@
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>3</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -71,7 +71,7 @@
 		</requiredResearchFacilities>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>4</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
 	<!-- Medical -->
@@ -87,8 +87,8 @@
 			<li>MedicineProduction</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>6</researchViewY>
+		<researchViewX>3</researchViewX>
+		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
 	<!--ResearchProjectDef>
@@ -122,7 +122,7 @@
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>3</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -141,7 +141,7 @@
 		</requiredResearchFacilities>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>4</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -156,7 +156,7 @@
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>3</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
 	<!-- All natural organs -->
@@ -170,8 +170,8 @@
 		<prerequisites>
 			<li>QE_OrganVat</li>
 		</prerequisites>
-		<researchViewX>0.5</researchViewX>
-		<researchViewY>4</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -184,8 +184,8 @@
 		<prerequisites>
 			<li>QE_OrganVat_InternalOrgans</li>
 		</prerequisites>
-		<researchViewX>0.5</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -198,8 +198,8 @@
 		<prerequisites>
 			<li>QE_OrganVat</li>
 		</prerequisites>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>4</researchViewY>
+		<researchViewX>2</researchViewX>
+		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -212,8 +212,8 @@
 		<prerequisites>
 			<li>QE_OrganVat_Bones</li>
 		</prerequisites>
-		<researchViewX>1.5</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>2</researchViewX>
+		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
 
 	<!-- Brain manipulation -->
@@ -227,6 +227,61 @@
 		<prerequisites>
 			<li>QE_VatGrownBeings</li>
 			<li>Fabrication</li>
+		</prerequisites>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>5</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Cyber enslaving -->
+	<ResearchProjectDef>
+		<defName>QE_NerveStapling</defName>
+		<tab>QE_ResearchTab</tab>
+		<label>nerve stapling</label>
+		<description>Considered an atrocity by many civilized societies this implant into the brain stimulates the pleasure and pain centers for control. This can turn the most unruly prisoner into a willing slave. The cost is steep though, being robbed of free will their learning ability is severly hampered. Could be used with great effect on clones to make them easily controllable. Allows creation of it at the machining table.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Prosthetics</li>
+		</prerequisites>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>QE_CrudeBionics</defName>
+		<tab>QE_ResearchTab</tab>
+		<label>crude bionics</label>
+		<description>Bionics can augment humanoids to new heights, but they pose one issue: They require expensive materials and components to make. Not ideal for a army. This can be remedied by making more crude versions which work almost as well but just require common materials like steel and industrial era components. This comes with a big downside though; they irritate the skin and flesh wherever they are attached to and are not hygienical. Should not be a issue though for people who do not find ethics practical. Allows creation of crude bionics at the machining table.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Prosthetics</li>
+		</prerequisites>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>QE_IntegratedWeaponry</defName>
+		<tab>QE_ResearchTab</tab>
+		<label>integrated weaponry</label>
+		<description>Outfitting a army or even a squad with weapons can be bothersome. And when they get downed they drop their weapons. To fix this problem why not integrate the weapons into them? Allows the creation of blades, bludgeons and ranged weapon platforms at the machining table. Allows creation of integrated weaponry at the machining table.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>QE_CrudeBionics</li>
 		</prerequisites>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>

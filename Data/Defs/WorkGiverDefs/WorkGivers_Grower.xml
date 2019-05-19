@@ -48,21 +48,21 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef ParentName="OrganVatMaintainBase">
-		<defName>QE_OrganGrower_Maintain_Research</defName>
-		<workType>Research</workType>
-		<priorityInType>101</priorityInType>
+		<defName>QE_OrganGrower_Maintain</defName>
+		<workType>QE_MaintainVat</workType>
+		<priorityInType>1</priorityInType>
 	</WorkGiverDef>
 
-	<WorkGiverDef ParentName="OrganVatMaintainBase">
+	<!-- WorkGiverDef ParentName="OrganVatMaintainBase">
 		<defName>QE_OrganGrower_Maintain_Doctor</defName>
-		<workType>Doctor</workType>
-		<priorityInType>5</priorityInType>
-	</WorkGiverDef>
+		<workType>QE_MaintainVat</workType>
+		<priorityInType>2</priorityInType>
+	</WorkGiverDef-->
 
 	<!-- Pawn Grower -->
 	<WorkGiverDef>
 		<defName>QE_OrderProcessor_PawnVat</defName>
-		<label>process order for organism vat</label>
+		<label>process order for clone vat</label>
 		<giverClass>QEthics.WorkGiver_GrowerOrderProcessor</giverClass>
 		<workType>Hauling</workType>
 		<verb>fill</verb>
@@ -78,7 +78,7 @@
 
 	<WorkGiverDef>
 		<defName>QE_PawnVat_Extract</defName>
-		<label>extract product from organism vat</label>
+		<label>extract product from clone vat</label>
 		<giverClass>QEthics.WorkGiver_GrowerExtractProduct</giverClass>
 		<workType>Hauling</workType>
 		<verb>extract</verb>
@@ -93,7 +93,7 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef Name="PawnVatMaintainBase" Abstract="True">
-		<label>maintains a organism vat</label>
+		<label>maintains a clone vat</label>
 		<giverClass>QEthics.WorkGiver_MaintainGrower</giverClass>
 		<verb>maintain</verb>
 		<gerund>maintaining</gerund>
@@ -107,14 +107,14 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef ParentName="PawnVatMaintainBase">
-		<defName>QE_PawnGrower_Maintain_Research</defName>
-		<workType>Research</workType>
-		<priorityInType>101</priorityInType>
+		<defName>QE_PawnGrower_Maintain</defName>
+		<workType>QE_MaintainVat</workType>
+		<priorityInType>1</priorityInType>
 	</WorkGiverDef>
 
-	<WorkGiverDef ParentName="PawnVatMaintainBase">
+	<!-- WorkGiverDef ParentName="PawnVatMaintainBase">
 		<defName>QE_PawnGrower_Maintain_Doctor</defName>
-		<workType>Doctor</workType>
-		<priorityInType>5</priorityInType>
-	</WorkGiverDef>
+		<workType>QE_MaintainVat</workType>
+		<priorityInType>2</priorityInType>
+	</WorkGiverDef-->
 </Defs>
