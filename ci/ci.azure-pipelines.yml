@@ -94,4 +94,4 @@ steps:
     vstsFeedPublish: 'Default'
     vstsFeedPackagePublish: 'QuestionableEthics'
     versionOption: 'custom'
-    versionPublish: '$(ExtractedAssemblyVersion)-ci.$(Build.BuildNumber)+$(Build.SourceVersion)'
+    versionPublish: '$(ExtractedAssemblyVersion)-ci.$(Build.BuildNumber)'
