@@ -5,5 +5,5 @@ obj/
 .vs/
 
 # Cannot include Assembly-CSharp.dll or UnityEngine.dll because it is presumably illegal to distribute them.
-_ReferenceAssemblies/Assembly-CSharp.dll
-_ReferenceAssemblies/UnityEngine.dll
+QEthics/_ReferenceAssemblies/Assembly-CSharp.dll
+QEthics/_ReferenceAssemblies/UnityEngine.dll
