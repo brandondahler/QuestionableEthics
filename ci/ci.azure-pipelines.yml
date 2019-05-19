@@ -92,6 +92,6 @@ steps:
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     feedsToUsePublish: 'internal'
     vstsFeedPublish: 'Default'
-    vstsFeedPackagePublish: 'QuestionableEthics'
+    vstsFeedPackagePublish: 'questionable-ethics'
     versionOption: 'custom'
     versionPublish: '$(ExtractedAssemblyVersion)-ci.$(Build.BuildNumber)'
