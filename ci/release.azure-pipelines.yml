@@ -10,27 +10,28 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: Assembly-CSharp.dll
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: UnityEngine.dll
+
+
 - task: NuGetToolInstaller@0
 
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
 
-- task: DownloadSecureFile@1
-  inputs:
-    secureFile: 'Assembly-CSharp.dll'
-
-- task: DownloadSecureFile@1
-  inputs:
-    secureFile: 'UnityEngine.dll'
-
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Agent.TempDirectory)'
+    SourceFolder: $(Agent.TempDirectory)
     Contents: |
       Assembly-CSharp.dll
       UnityEngine.dll
-    TargetFolder: '$(Build.SourcesDirectory)/src/QEthics/_ReferenceAssemblies'
+    TargetFolder: $(Build.SourcesDirectory)/src/QEthics/_ReferenceAssemblies
 
 - task: VSBuild@1
   inputs:
@@ -41,26 +42,26 @@ steps:
 - task: DeleteFiles@1
   condition: always()
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/src/QEthics/_ReferenceAssemblies'
+    SourceFolder: $(Build.SourcesDirectory)/src/QEthics/_ReferenceAssemblies
     Contents: |
       Assembly-CSharp.dll
       UnityEngine.dll
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: $(Build.SourcesDirectory)
-    Contents: src/QEthics/Data/**
-    TargetFolder: $(Build.ArtifactsStagingDirectory)
+    SourceFolder: $(Build.SourcesDirectory)/src/QEthics/Data
+    Contents: '**'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
     OverWrite: true
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: $(Build.SourcesDirectory)
+    SourceFolder: $(Build.SourcesDirectory)/src/QEthics/bin/$(buildConfiguration)
     Contents: |
-      src/QEthics/bin/$(buildConfiguration)/0Harmony.dll
-      src/QEthics/bin/$(buildConfiguration)/QEthics.dll
-      src/QEthics/bin/$(buildConfiguration)/QEthics.pdb
-    TargetFolder: $(Build.ArtifactsStagingDirectory)/Assemblies
+      0Harmony.dll
+      QEthics.dll
+      QEthics.pdb
+    TargetFolder: $(Build.ArtifactStagingDirectory)/Assemblies
     OverWrite: true
     
 # Extract version from assembly
@@ -68,7 +69,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $qEthics = [System.Reflection.Assembly]::ReflectionOnlyLoadFrom($($env:BUILD_ARTIFACTSSTAGINGDIRECTORY + "\Assemblies\QEthics.dll"))
+      $qEthics = [System.Reflection.Assembly]::ReflectionOnlyLoadFrom($($env:BUILD_ARTIFACTSTAGINGDIRECTORY + "\Assemblies\QEthics.dll"))
       $qEthicsName = $qEthics.GetName()
       $qEthicsVersion = $qEthicsName.version
       
