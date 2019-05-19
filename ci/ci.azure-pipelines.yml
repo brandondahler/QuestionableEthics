@@ -33,7 +33,7 @@ steps:
     Contents: |
       Assembly-CSharp.dll
       UnityEngine.dll
-    TargetFolder: '$(Agent.BuildDirectory)/src/QEthics/_ReferenceAssemblies'
+    TargetFolder: '$(Build.SourcesDirectory)/src/QEthics/_ReferenceAssemblies'
 
 - task: VSBuild@1
   inputs:
